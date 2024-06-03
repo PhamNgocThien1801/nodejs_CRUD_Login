@@ -1,0 +1,24 @@
+<div class="container col-sm-12 d-flex mt-4">
+    <div class="col-sm-3 border border-black h-50 rounded-3 bg-light">
+        <div class="text-center">
+            <p class="text-center my-2">Bạn đã đăng ký khoá học này</p>
+            <button class="rounded-3 bg-success text-white my-2 text-center">Học Ngay</button>
+        </div>
+        <div class="ps-5">
+            <p>Tổng số video</p>
+            <p>Trình độ trung bình</p>
+            <p>Cần 6.05 giờ để học</p>
+            <p>Truy cập mọi lúc, mọi nơi</p>
+        </div>
+    </div>
+    <div class="col-sm-9 ps-3">
+        {{#with courses}}
+        <h2>{{name}}</h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/{{video}}" title="YouTube video"
+                ></iframe>
+        </div>
+        <p>{{discription}}</p>
+        {{/with}}
+    </div>
+</div>

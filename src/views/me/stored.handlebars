@@ -1,0 +1,27 @@
+<div class="mt-4">
+    {{#each course}}
+
+    <table class="table mx-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Discription</th>
+                <th scope="col">slug</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ @index }}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.discription}}</td>
+                <td>{{this.slug}}</td>
+                <td><a href="/courses/{{this._id}}/edit">update</a></td>
+                <td><a href="">delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+    {{/each}}
+
+</div>
